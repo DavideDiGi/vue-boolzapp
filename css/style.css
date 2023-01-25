@@ -3,3 +3,119 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(0deg, rgba(216,219,211,1) 85%, rgba(0,150,136,1) 85%);
+    height: calc(100vh - 16px);
+}
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.general-container{
+    height: 650px;
+}
+.general-container header, footer{
+    height: 10%;
+    background-color: rgb(234, 234, 234);
+}
+
+/* ASIDE */
+.general-container > aside{
+    height: 100%;
+}
+.general-container > aside > header{
+    width: 100%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+.general-container > aside > header > .account{
+    width: 30%;
+    padding: 10px;
+}
+.general-container > aside > header > .account > .account-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.general-container > aside > header > .account > .account-content > .account-pic{
+}
+.general-container > aside > header > .account > .account-content > .account-name{
+}
+.general-container > aside > header > nav{
+    width: 30%;
+}
+.general-container > aside > header > nav > .buttons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    color: grey;
+}
+
+
+.general-container aside > .upper-aside{
+    height: 20%;
+    
+}
+.general-container aside > .upper-aside > .notification{
+    height: 60%;
+    background-color: yellowgreen;
+}
+.general-container aside > .upper-aside > .search-bar{
+    height: 40%;
+    background-color: rgb(250, 250, 250);
+}
+.general-container aside > .lower-aside{
+    height: 70%;
+    background-color: white;
+    overflow: auto;
+}
+.general-container aside > .lower-aside > .contacts{
+    height: 18%;
+    background-color: white;
+    border: 1px dashed orange;
+}
+/* FINE ASIDE */
+
+.general-container .main-container{
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.general-container .main-container #main-header{
+    width: 100%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+.general-container .main-container #main-header .left-side{
+    /* width: 50%;
+    padding: 10px; */
+}
+.general-container .main-container #main-header .left-side .contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.general-container .main-container #main-header .left-side .contact > .account-name >.last-access{
+    font-size: 0.7rem;
+    color: gray;
+}
+.general-container .main-container #main-header .right-nav{
+    
+}
+.general-container .main-container #main-header .right-nav > .chat-buttons{
+    float: right;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+} 

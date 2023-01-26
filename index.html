@@ -86,28 +86,28 @@
 
                 <!-- INIZIO LISTA CHAT APERTE -->
                 <div class="lower-aside">
-
-                    <div class="contacts active-contact">
+                    
+                    <div class="single-contact" v-for="contact in contacts"> <!-- active-contact -->
                         
-                        <div class="contact-pic">
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div class="single-contact-pic">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
-                            <div>Lidia</div>
+                        <div class="single-contact-name ms-2">
+                            <div>{{ contact.name }}</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
                         </div>
 
                     </div>
                     
-                    <div class="contacts">
+                    <!-- <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_2.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Fabio</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -115,13 +115,13 @@
                         
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_3.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Samuele</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -129,13 +129,13 @@
 
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_4.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Alessandro B.</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -143,13 +143,13 @@
 
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_5.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Alessandro L.</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -157,13 +157,13 @@
 
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_6.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Claudia</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -171,13 +171,13 @@
 
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_7.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Federico</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
@@ -185,19 +185,19 @@
 
                     </div>
                     
-                    <div class="contacts">
+                    <div class="single-contact">
 
-                        <div class="contact-pic">
+                        <div class="single-contact-pic">
                             <img src="img/avatar_8.jpg" alt="">
                         </div>
 
-                        <div class="contact-name ms-2">
+                        <div class="single-contact-name ms-2">
                             <div>Michele</div>
                             <div class="last-msg">Ultimo messaggio inviato</div>
                             <span class="msg-time">12:00</span>
                         </div>
 
-                    </div>
+                    </div> -->
                 
                     
                 </div>
@@ -216,7 +216,7 @@
 
                         <div class="left-side w-50 p-2">
 
-                            <div class="single-contact">
+                            <div class="contact-chat">
 
                                 <div class="account-pic">
                                     <img src="img/avatar_1.jpg" alt="">

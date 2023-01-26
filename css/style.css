@@ -100,7 +100,7 @@ img{
     background-color: white;
     overflow: auto;
 }
-.general-container aside > .lower-aside > .contacts{
+.general-container aside > .lower-aside > .single-contact{
     height: 15%;
     background-color: white;
     width: 100%;
@@ -110,21 +110,21 @@ img{
     border-bottom: 0.5px solid lightgray;
     padding-left: 20px;
 }
-.general-container aside > .lower-aside > .contacts > .contact-name{
+.general-container aside > .lower-aside > .single-contact > .single-contact-name{
     font-size: 0.9rem;
 }
-.general-container aside > .lower-aside > .contacts > .contact-name >.last-msg{
+.general-container aside > .lower-aside > .single-contact > .single-contact-name >.last-msg{
     font-size: 0.7rem;
     color: rgb(183, 180, 180);
 }
-.general-container aside > .lower-aside > .contacts > .contact-name >.msg-time{
+.general-container aside > .lower-aside > .single-contact > .single-contact-name >.msg-time{
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 0.6rem;
     color: rgb(183, 180, 180);
 }
-.general-container aside > .lower-aside > .contacts.active-contact{
+.general-container aside > .lower-aside > .single-contact.active-contact{
     background-color: rgb(226, 226, 226);
 }
 /******************** FINE ASIDE ********************/
@@ -144,15 +144,15 @@ img{
     display: flex;
     justify-content: space-between;
 }
-.general-container main #main-header .left-side .single-contact{
+.general-container main #main-header .left-side .contact-chat{
     width: 100%;
     display: flex;
     align-items: center;
 }
-.general-container main #main-header .left-side .single-contact > .account-name > div:first-child{
+.general-container main #main-header .left-side .contact-chat > .account-name > div:first-child{
     font-size: 0.9rem;
 }
-.general-container main #main-header .left-side .single-contact > .account-name >.last-access{
+.general-container main #main-header .left-side .contact-chat > .account-name >.last-access{
     font-size: 0.7rem;
     color: gray;
 }

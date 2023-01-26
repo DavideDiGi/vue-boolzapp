@@ -1,8 +1,11 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* REGOLE GENERALI */
 body{
     background: linear-gradient(0deg, rgba(216,219,211,1) 85%, rgba(0,150,136,1) 85%);
     height: calc(100vh - 16px);
@@ -15,12 +18,12 @@ img{
 .general-container{
     height: 650px;
 }
-.general-container header, footer{
+.general-container header{
     height: 10%;
     background-color: rgb(234, 234, 234);
 }
 
-/* ASIDE */
+/******************** ASIDE ********************/
 .general-container > aside{
     height: 100%;
 }
@@ -29,7 +32,6 @@ img{
     border-right: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
-    /* background-color: yellow; */
 }
 .general-container > aside > header > .account{
     width: 30%;
@@ -40,9 +42,8 @@ img{
     display: flex;
     align-items: center;
 }
-.general-container > aside > header > .account > .account-content > .account-pic{
-}
 .general-container > aside > header > .account > .account-content > .account-name{
+    font-size: 0.9rem;
 }
 .general-container > aside > header > nav{
     width: 30%;
@@ -56,61 +57,106 @@ img{
     justify-content: space-around;
     color: grey;
 }
-
-
 .general-container aside > .upper-aside{
-    height: 20%;
-    
+    height: 18%;
 }
 .general-container aside > .upper-aside > .notification{
     height: 60%;
-    background-color: yellowgreen;
+    background-color: rgb(142, 218, 252);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+.general-container aside > .upper-aside > .notification > .ring-bell{
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(142, 218, 252);
+}
+.general-container aside > .upper-aside > .notification > .cta > a{
+    font-size: 0.7rem;
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
 }
 .general-container aside > .upper-aside > .search-bar{
-    height: 40%;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(247, 247, 247);
+}
+.general-container aside > .upper-aside > .search-bar > .input-group > .form-control{
+    max-height:30px; 
+}
+.general-container aside > .upper-aside > .search-bar > .input-group > span{
+    color: grey;
+}
+::placeholder{
+    font-size: 0.8rem;
 }
 .general-container aside > .lower-aside{
-    height: 70%;
+    height: 72%;
     background-color: white;
     overflow: auto;
 }
 .general-container aside > .lower-aside > .contacts{
-    height: 18%;
+    height: 15%;
     background-color: white;
-    border: 1px dashed orange;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 0.5px solid lightgray;
+    padding-left: 20px;
 }
-/* FINE ASIDE */
+.general-container aside > .lower-aside > .contacts > .contact-name{
+    font-size: 0.9rem;
+}
+.general-container aside > .lower-aside > .contacts > .contact-name >.last-msg{
+    font-size: 0.7rem;
+    color: rgb(183, 180, 180);
+}
+.general-container aside > .lower-aside > .contacts > .contact-name >.msg-time{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.6rem;
+    color: rgb(183, 180, 180);
+}
+.general-container aside > .lower-aside > .contacts.active-contact{
+    background-color: rgb(226, 226, 226);
+}
+/******************** FINE ASIDE ********************/
 
-.general-container .main-container{
+/******************** INIZIO MAIN ********************/
+.general-container main{
     background-image: url(../img/mine.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.general-container .main-container #main-header{
+
+/********** INIZIO HEADER **********/
+.general-container main #main-header{
     width: 100%;
     border-right: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
 }
-.general-container .main-container #main-header .left-side{
-    /* width: 50%;
-    padding: 10px; */
-}
-.general-container .main-container #main-header .left-side .contact{
+.general-container main #main-header .left-side .single-contact{
     width: 100%;
     display: flex;
     align-items: center;
 }
-.general-container .main-container #main-header .left-side .contact > .account-name >.last-access{
+.general-container main #main-header .left-side .single-contact > .account-name > div:first-child{
+    font-size: 0.9rem;
+}
+.general-container main #main-header .left-side .single-contact > .account-name >.last-access{
     font-size: 0.7rem;
     color: gray;
 }
-.general-container .main-container #main-header .right-nav{
-    
-}
-.general-container .main-container #main-header .right-nav > .chat-buttons{
+.general-container main #main-header .right-nav > .chat-buttons{
     float: right;
     width: 30%;
     height: 100%;
@@ -119,3 +165,84 @@ img{
     align-items: center;
     color: gray;
 } 
+/********** FINE HEADER **********/
+
+/********** INIZIO CHAT **********/
+.general-container main .chat{
+    background-image: url(../img/mine.jpg);
+    flex-grow: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.general-container main .chat .messages{ 
+    min-width: 40%;
+    max-width: 55%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    background-color:white;
+    border-radius: 8px;
+    position: relative;
+}
+.general-container main .chat .messages .sending-time{ 
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    color: rgb(183, 180, 180);
+}
+.general-container main .chat .sent{ 
+    background-color: rgb(213, 249, 186);
+    align-self: flex-end;
+}
+.general-container main .chat .corner{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    position: absolute;
+    top: -5px;
+    rotate: 270deg;
+  }
+  .general-container main .chat .corner.right {
+    border-right:10px solid rgb(213, 249, 186);
+    left: 98%;
+  }
+  .general-container main .chat .corner.left {
+    border-right:10px solid white;
+    right: 98%;
+  }
+/********** FINE CHAT **********/
+
+/********** INIZIO FOOTER **********/
+.general-container main footer{
+    display: flex;
+    height: 8%;
+    background-color: rgb(243, 238, 234);
+}
+.general-container main footer i{
+    color: gray;
+}
+.general-container main footer >.left-footer{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.general-container main footer >.mid-footer{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.general-container main footer >.right-footer{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/********** FINE FOOTER **********/
+
+/******************** FINE MAIN ********************/

@@ -14,10 +14,13 @@
 </head>
 
 <body class="">
+    
     <!-- INIZIO contenitore istanza Vue -->
     <div id="app">
     
+        <!-- INIZIO CONTENITORE GENERALE -->
         <div class="general-container container-fluid bg-light w-75 mt-3 d-flex px-0">
+    
             <!-- INIZIO aside -->
             <aside class="col-4 ">
 
@@ -52,82 +55,251 @@
 
                 <div class="upper-aside">
 
-                    <div class="notification bg-info"></div>
-                    <div class="search-bar"></div>
+                    <div class="notification">
 
-                </div>
+                        <div class="ring-bell ms-3">
+                            <i class="fa-solid fa-bell-slash fs-5"></i>
+                        </div>
 
-                <div class="lower-aside">
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    <div class="contacts"></div>
-                    
-                </div>
-
-            </aside>
-            <!-- FINE aside -->
-
-            <div class="main-container col-8">
-
-                <!-- INIZIO main-header -->
-                <header id="main-header" class="">
-
-                    <div class="left-side w-50 p-2">
-
-                        <div class="contact">
-
-                            <div class="account-pic">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-
-                            <div class="account-name ms-2">
-                                
-                                <div>Lidia</div>
-                                <div class="last-access">Ultimo accesso oggi alle 12:00</div>
-                           
-                            </div>
-
+                        <div class="cta ms-2">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <a>Attiva notifiche desktop</a>
                         </div>
 
                     </div>
 
-                    <nav class="right-nav w-50">
+                    <div class="search-bar p-2">
 
-                        <div class="chat-buttons">
+                        <div class="input-group">
 
-                            <div class="reload ms-3"><i class="fa-solid fa-magnifying-glass"></i></div>
-                            <div class="new-message"><i class="fa-solid fa-paperclip"></i></div>
-                            <div class="menu me-2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            <span class="input-group-text rounded-0 border-0 bg-white fs-6" id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass ms-3"></i>
+                            </span>
+
+                            <input class="form-control border-start-0 me-2 rounded-0 border-0" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                       
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- INIZIO LISTA CHAT APERTE -->
+                <div class="lower-aside">
+
+                    <div class="contacts active-contact">
+                        
+                        <div class="contact-pic">
+                            <img src="img/avatar_1.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Lidia</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_2.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Fabio</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_3.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Samuele</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_4.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Alessandro B.</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_5.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Alessandro L.</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_6.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Claudia</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_7.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Federico</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="contacts">
+
+                        <div class="contact-pic">
+                            <img src="img/avatar_8.jpg" alt="">
+                        </div>
+
+                        <div class="contact-name ms-2">
+                            <div>Michele</div>
+                            <div class="last-msg">Ultimo messaggio inviato</div>
+                            <span class="msg-time">12:00</span>
+                        </div>
+
+                    </div>
+                
+                    
+                </div>
+                <!-- FINE LISTA CHAT APERTE -->
+
+
+            </aside>
+            <!-- FINE aside -->
+
+            
+                <!-- INIZIO main -->
+                <main class="col-8">
+
+                    <!-- INIZIO main-header -->
+                    <header id="main-header" class="">
+
+                        <div class="left-side w-50 p-2">
+
+                            <div class="single-contact">
+
+                                <div class="account-pic">
+                                    <img src="img/avatar_1.jpg" alt="">
+                                </div>
+
+                                <div class="account-name ms-2">
+                                    
+                                    <div>Lidia</div>
+                                    <div class="last-access">Ultimo accesso oggi alle 12:00</div>
+                            
+                                </div>
+
+                            </div>
 
                         </div>
 
-                    </nav>
+                        <nav class="right-nav w-50">
 
-                </header>
-                <!-- FINE main-header -->
+                            <div class="chat-buttons">
 
-                <!-- INIZIO main -->
-                <main>
-                    <div class="sent-messages"></div>
-                    <div class="received-messages"></div>
-                </main>
+                                <div class="reload ms-3"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                <div class="new-message"><i class="fa-solid fa-paperclip"></i></div>
+                                <div class="menu me-2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+
+                            </div>
+
+                        </nav>
+
+                    </header>
+                    <!-- FINE main-header -->
+
+                    <!-- INIZIO chat -->
+                    <div class="chat">
+                        <div class="sent messages">
+
+                            <span class="corner right"></span>
+                            <span>Hai portato a spasso il cane?</span>
+                            <span class="sending-time">15:30</span>
+
+                        </div>
+
+                        <div class="sent messages">
+
+                            <span class="corner right"></span>
+                            <span>Ricordati di stendere i panni!</span>
+                            <span class="sending-time">15:30</span>
+
+                        </div>
+
+                        <div class="received messages">
+
+                            <span class="corner left"></span>
+                            <span>Tutto fatto!</span>
+                            <span class="sending-time">16:15</span>
+
+                        </div>
+                        
+                    </div>
+                    <!-- FINE chat -->
+
+                    <!-- INIZIO footer -->
+                    <footer>
+
+                        <div class="left-footer"><i class="fa-regular fa-face-smile"></i></div>
+                        
+                        <div class="mid-footer">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                        </div>  
+
+                        <div class="right-footer"><i class="fa-solid fa-microphone"></i></div>
+
+                    </footer>
+                    <!-- FINE footer -->
+
+                </main> 
                 <!-- FINE main -->
 
-                <!-- INIZIO footer -->
-                <footer>
-                    <div class="left-footer"></div>
-                    <div class="mid-footer"></div>
-                    <div class="right-footer"></div>
-                </footer>
-                <!-- FINE footer -->
-
-            </div>
         </div>
+        <!-- FINE CONTENITORE GENERALE -->
 
     </div>
     <!-- FINE contenitore istanza Vue -->

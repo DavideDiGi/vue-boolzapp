@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- importazione Vue -->
 </head>
 
-<body class="">
+<body>
     
     <!-- INIZIO contenitore istanza Vue -->
     <div id="app">
@@ -250,15 +250,29 @@
 
                     <!-- INIZIO chat -->
                     <div class="chat">
-                        <div class="sent messages">
+                        <div class="sent messages" v-for="singleMessage in contacts[activeContact].messages"
 
-                            <span class="corner right"></span>
+                            :class="singleMessage.status"
+                            >
+                            {{ singleMessage.message }}
+                            <span class="sending-time">
+                                {{ singleMessage.date }}
+                            </span>
+                            <!-- <span>
+                                {{ singleMessage.corner }}
+                            </span> -->
+                            
+                            <span :class="singleMessage.corner"></span> 
+
+
+
+                            <!-- <span class="corner right"></span>
                             <span>Hai portato a spasso il cane?</span>
-                            <span class="sending-time">15:30</span>
+                            <span class="sending-time">15:30</span> -->
 
                         </div>
 
-                        <div class="sent messages">
+                        <!-- <div class="sent messages">
 
                             <span class="corner right"></span>
                             <span>Ricordati di stendere i panni!</span>
@@ -272,7 +286,7 @@
                             <span>Tutto fatto!</span>
                             <span class="sending-time">16:15</span>
 
-                        </div>
+                        </div> -->
                         
                     </div>
                     <!-- FINE chat -->

@@ -197,6 +197,10 @@ img{
     background-color: rgb(213, 249, 186);
     align-self: flex-end;
 }
+.general-container main .chat .received{ 
+    background-color: white;
+    align-self: flex-start;
+}
 .general-container main .chat .corner{
     width: 0; 
     height: 0; 

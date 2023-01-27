@@ -159,9 +159,6 @@
                             <span class="sending-time">
                                 {{ singleMessage.date }}
                             </span>
-                            <!-- <span>
-                                {{ singleMessage.corner }}
-                            </span> -->
                             
                             <span :class="singleMessage.corner"></span> 
 
@@ -178,7 +175,7 @@
                         <div class="mid-footer">
 
                             <div class="input-group">
-                                <input type="text" class="form-control border-0" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
+                                <input @keyup.enter="sendNewMessage" @keyup.enter="friendsAnswer" v-model="newMessageText" type="text"  class="form-control border-0" placeholder="Scrivi un messaggio" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
 
                         </div>  

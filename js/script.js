@@ -197,7 +197,33 @@ createApp({
             shamblesContacts(i){
                 this.activeContact = i;
                 console.log(i);
-            }
-        }
+            },
+            sendNewMessage() {
+                
+                const newMessageObject = {
+                    date: '18:10',
+                    message: this.newMessageText,
+                    status: 'sent',
+                    corner: 'right corner' 
+                };
+                this.contacts[this.activeContact].messages.push(newMessageObject);
+                this.newMessageText = '';
 
+            setTimeout(() => {
+                this.friendsAnswer();
+            }, 1000);
+        },
+        friendsAnswer() {
+            const autoAnswerObject = {
+                date: '18:11',
+                message: 'Ok!',
+                status: 'received',
+                corner: 'left corner'
+            };
+            console.log('ecco la risposta');
+            this.contacts[this.activeContact].messages.push(autoAnswerObject);
+
+        }
+    }
+    
 }).mount('#app');

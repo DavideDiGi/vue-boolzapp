@@ -194,7 +194,10 @@ createApp({
         }
     },
     methods: {
-            
+            shamblesContacts(i){
+                this.activeContact = i;
+                console.log(i);
+            }
         }
 
 }).mount('#app');

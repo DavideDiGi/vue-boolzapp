@@ -87,7 +87,7 @@
                 <!-- INIZIO LISTA CHAT APERTE -->
                 <div class="lower-aside">
                     
-                    <div class="single-contact" v-for="contact in contacts"> <!-- active-contact -->
+                    <div class="single-contact" v-for="(contact, index) in contacts" @click="shamblesContacts(index)"> 
                         
                         <div class="single-contact-pic">
                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
@@ -100,105 +100,6 @@
                         </div>
 
                     </div>
-                    
-                    <!-- <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_2.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Fabio</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_3.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Samuele</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_4.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Alessandro B.</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_5.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Alessandro L.</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_6.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Claudia</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_7.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Federico</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div>
-                    
-                    <div class="single-contact">
-
-                        <div class="single-contact-pic">
-                            <img src="img/avatar_8.jpg" alt="">
-                        </div>
-
-                        <div class="single-contact-name ms-2">
-                            <div>Michele</div>
-                            <div class="last-msg">Ultimo messaggio inviato</div>
-                            <span class="msg-time">12:00</span>
-                        </div>
-
-                    </div> -->
-                
                     
                 </div>
                 <!-- FINE LISTA CHAT APERTE -->
@@ -219,12 +120,12 @@
                             <div class="contact-chat">
 
                                 <div class="account-pic">
-                                    <img src="img/avatar_1.jpg" alt="">
+                                    <img :src="`img/avatar${contacts[activeContact].avatar}.jpg`" alt="">
                                 </div>
 
                                 <div class="account-name ms-2">
                                     
-                                    <div>Lidia</div>
+                                    <div> {{ contacts[activeContact].name }} </div>
                                     <div class="last-access">Ultimo accesso oggi alle 12:00</div>
                             
                                 </div>
@@ -264,29 +165,7 @@
                             
                             <span :class="singleMessage.corner"></span> 
 
-
-
-                            <!-- <span class="corner right"></span>
-                            <span>Hai portato a spasso il cane?</span>
-                            <span class="sending-time">15:30</span> -->
-
                         </div>
-
-                        <!-- <div class="sent messages">
-
-                            <span class="corner right"></span>
-                            <span>Ricordati di stendere i panni!</span>
-                            <span class="sending-time">15:30</span>
-
-                        </div>
-
-                        <div class="received messages">
-
-                            <span class="corner left"></span>
-                            <span>Tutto fatto!</span>
-                            <span class="sending-time">16:15</span>
-
-                        </div> -->
                         
                     </div>
                     <!-- FINE chat -->

@@ -109,6 +109,7 @@ img{
     position: relative;
     border-bottom: 0.5px solid lightgray;
     padding-left: 20px;
+    cursor: pointer;
 }
 .general-container aside > .lower-aside > .single-contact > .single-contact-name{
     font-size: 0.9rem;

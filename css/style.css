@@ -57,6 +57,9 @@ img{
     justify-content: space-around;
     color: grey;
 }
+i{
+    cursor: pointer;
+}
 .general-container aside > .upper-aside{
     height: 18%;
 }

@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
+            searchContact: '',
             activeContact: 0,
             contacts: [ 
                 {
@@ -208,7 +209,7 @@ createApp({
                 };
                 this.contacts[this.activeContact].messages.push(newMessageObject);
                 this.newMessageText = '';
-
+                    
             setTimeout(() => {
                 this.friendsAnswer();
             }, 1000);
@@ -223,6 +224,13 @@ createApp({
             console.log('ecco la risposta');
             this.contacts[this.activeContact].messages.push(autoAnswerObject);
 
+        }
+    },
+    computed: {
+        filteredContacts() {
+            return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+            });
         }
     }
     

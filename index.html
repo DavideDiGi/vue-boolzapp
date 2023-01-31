@@ -76,8 +76,7 @@
                                 <i class="fa-solid fa-magnifying-glass ms-3"></i>
                             </span>
 
-                            <input class="form-control border-start-0 me-2 rounded-0 border-0" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
-                       
+                            <input class="form-control border-start-0 me-2 rounded-0 border-0" type="search" v-model="searchContact" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
                         </div>
 
                     </div>
@@ -87,8 +86,8 @@
                 <!-- INIZIO LISTA CHAT APERTE -->
                 <div class="lower-aside">
                     
-                    <div class="single-contact" v-for="(contact, index) in contacts" @click="shamblesContacts(index)"> 
-                        
+                    <div class="single-contact" v-for="(contact, index) in filteredContacts" @click="shamblesContacts(index)"> 
+
                         <div class="single-contact-pic">
                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         </div>
